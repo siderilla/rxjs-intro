@@ -1,0 +1,1 @@
+alternativa alla reattività di signal di angular
