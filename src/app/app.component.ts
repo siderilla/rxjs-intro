@@ -2,10 +2,12 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RedditService } from './services/reddit.service';
 import { type Post } from './model/post';
+import { SlaveComponent } from "./components/slave/slave.component";
+import { MasterComponent } from "./components/master/master.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, SlaveComponent, MasterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
