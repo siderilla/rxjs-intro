@@ -25,3 +25,11 @@ comando.pipe - return children (perché il pipe collega genitore a processo figl
 map -> mappa ogni cambiamento su signal e osservable :
 ((((((((((((((signal e observable sono array temporali, sono scatole che cambiano valore nel tempo))))))))))))))
 
+change master - subscribe slave
+
+behaviour start con subscribe, siccome ha un valore iniziale, gli lancia già un evento, mentre gli altri non lanciano niente perché non hanno nulla da comunicare 
+
+se faccio change (tutti e tre) prima di subscribe non funziona
+replay da tutto lo storico a seconda del buffer a disposizione (10) di tutti i cambiamenti avvenuti (change)
+
+--- testalo un po' e chiedi a chatgpt le differenze 

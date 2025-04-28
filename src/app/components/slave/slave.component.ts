@@ -8,5 +8,22 @@ import { ComService } from '../../services/com/com.service';
   styleUrl: './slave.component.scss'
 })
 export class SlaveComponent {
+
   comService = inject(ComService)
+
+
+  subscribeReSbj() {
+    this.comService.ReSbj.subscribe(data => console.log('replay', data));
+
+  }
+
+  subscribeBeSbj() {
+    this.comService.beSbj.subscribe(data => console.log('behaviour', data));
+
+  }
+
+  subscribeSbj() {
+    this.comService.sbj.subscribe(data => console.log('normal', data));
+  }
+
 }

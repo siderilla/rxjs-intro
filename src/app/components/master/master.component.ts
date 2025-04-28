@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ComService } from '../../services/com/com.service';
 
 @Component({
   selector: 'app-master',
@@ -7,5 +8,22 @@ import { Component } from '@angular/core';
   styleUrl: './master.component.scss'
 })
 export class MasterComponent {
+
+  comService = inject(ComService);
+
+  changeReSbj() {
+    const newString = 'replaySubject' + Date.now();
+    this.comService.ReSbj.next(newString)
+  }
+
+  changeBeSbj() {
+    const newString = 'behaviourSubject' + Date.now();
+    this.comService.beSbj.next(newString)
+  }
+
+  changeSbj() {
+    const newString = 'normalSubject' + Date.now();
+    this.comService.sbj.next(newString)
+  }
 
 }
